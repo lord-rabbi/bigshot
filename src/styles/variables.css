@@ -1,0 +1,37 @@
+:root {
+  --bg-light: #d2d4dd;
+  --text-light: #2c3e50;
+  --sidebar-light: #ffffff;
+  --hover-light: #ecf0f1;
+
+
+  --bg-dark: #1e1e2f;
+  --text-dark: #ecf0f1;
+  --sidebar-dark: #2c3e50;
+  --hover-dark: #34495e;
+}
+
+[data-theme="light"] {
+  --bg: var(--bg-light);
+  --text: var(--text-light);
+  --sidebar: var(--sidebar-light);
+  --hover: var(--hover-light);
+}
+
+[data-theme="dark"] {
+  --bg: var(--bg-dark);
+  --text: var(--text-dark);
+  --sidebar: var(--sidebar-dark);
+  --hover: var(--hover-dark);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 500;
+  overflow: hidden;
+}

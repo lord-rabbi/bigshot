@@ -1,0 +1,122 @@
+.dashboard {
+  display: flex;
+  height: 100vh;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 220px;
+  background-color: var(--sidebar);
+  padding: 2rem 1.5rem;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sidebar h2 {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.sidebar nav li:hover {
+  background-color: var(--hover);
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+.label {
+  font-size: 1rem;
+}
+
+.content {
+  margin-left: 150px;
+  padding: 3rem;
+  flex: 1;
+  background-color: var(--bg);
+}
+
+.title{
+  text-align: center;
+  text-transform:capitalize;
+}
+
+.card-container {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-left: 80px;
+}
+
+.card {
+  flex: 1;
+  padding: 1.5rem;
+  background-color: var(--hover);
+  border: white 1px solid;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.card {
+  background-color: var(--card);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card-icon {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+.dashboard-section {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: var(--bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
