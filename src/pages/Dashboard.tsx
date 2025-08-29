@@ -54,7 +54,10 @@ const Dashboard: React.FC = () => {
         </div>
 
         {showViewer && (
-          <div className="dashboard-section" ref={viewerRef}>
+          <div
+            className={`dashboard-section ${fullscreen ? 'fullscreen-mode' : ''}`}
+            ref={viewerRef}
+          >
             <div className="section-header">
               <h2>Gestion des PDF</h2>
               <div className="header-buttons">

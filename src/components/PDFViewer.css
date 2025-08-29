@@ -1,59 +1,35 @@
 .pdf-viewer {
   display: flex;
   flex-direction: column;
-  height: 50vh;
   align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
   padding: 1rem;
+  box-sizing: border-box;
+  transition: all 0.4s ease-in-out;
+}
+
+.pdf-viewer.expanded {
+  height: 100vh;
+  padding: 0;
 }
 
 .controls {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1rem;
-  flex-wrap: wrap;
-}
-
-.controls {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
 canvas {
-  display: block;
-  margin: 1rem auto;
+  flex-grow: 1;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: calc(100vh - 140px);
   border: 1px solid #ccc;
   background-color: white;
-  max-width: 60%;
-  height: 250px;
+  transition: all 0.4s ease-in-out;
 }
-
-.dashboard-section {
-  justify-content: center; 
-  align-items: center;     
-  height: 57vh;          
-  width: 90%;
-  margin-left: 100px;
-}
-
-.section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.close-button {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #c65e5e;
-  transition: color 0.2s ease;
-}
-
-.close-button:hover {
-  color: #000;
-}
-
-
