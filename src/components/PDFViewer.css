@@ -57,25 +57,3 @@ canvas {
 }
 
 
-
-.top-bar {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  padding: 10px;
-}
-
-.fullscreen-button,
-.close-button {
-  background-color: #444;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.fullscreen-button:hover,
-.close-button:hover {
-  background-color: #666;
-}
