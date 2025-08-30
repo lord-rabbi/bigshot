@@ -1,7 +1,7 @@
 .pdf-viewer {
   position: relative;
   display: flex;
-  flex-direction: row;
+  flex-direction: column; 
   align-items: center;
   justify-content: center;
   height: 100%;
@@ -14,12 +14,20 @@
 .pdf-viewer.expanded {
   height: 100vh;
   width: 100vw;
-  background-color: var(--bg);
+  background-color: var(--bg, #eaeaea);
+}
+
+.canvas-wrapper {
+  max-width: 100%;
+  max-height: 85vh;
+  overflow: auto;
 }
 
 canvas {
-  max-width: 90%;
-  max-height: 85vh;
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  height: auto;
   border: 1px solid #ccc;
   background-color: white;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -28,16 +36,16 @@ canvas {
 
 .compact-controls {
   position: fixed;
-  top: 100px;
+  top: 90px;
   left: 0;
-  height: 100vh;
+  height: 85vh;
   width: 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   padding: 1rem 0.5rem;
-  color: #ffffff;
+  color: var(--text);
   z-index: 1000;
   gap: 1rem;
   overflow-y: auto;
@@ -55,13 +63,27 @@ canvas {
 }
 
 .compact-controls input[type="file"] {
-  font-size: 0.7rem;
+  display: none;
+}
+
+.import-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #3a3f5c;
   color: #ffffff;
-  background: none;
-  border: none;
-  text-align: center;
-  width: 100%;
+  font-size: 1.2rem;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.import-label:hover {
+  background-color: #5c638a;
+  transform: scale(1.05);
 }
 
 .compact-controls button {
@@ -84,31 +106,7 @@ canvas {
 
 .page-info {
   font-size: 0.75rem;
-  color: #ccc;
+  color:var(--text);
   margin-top: auto;
   margin-bottom: 1rem;
-}
-
-.compact-controls input[type="file"] {
-  display: none; /* On cache le vrai input */
-}
-
-.import-label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: #3a3f5c;
-  color: #ffffff;
-  font-size: 1.2rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.import-label:hover {
-  background-color: #5c638a;
-  transform: scale(1.05);
 }
